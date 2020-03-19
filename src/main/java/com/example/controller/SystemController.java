@@ -56,7 +56,7 @@ public class SystemController {
 	}
 	
 	/**
-	 * ע����¼ 
+	 * 登出
 	 * @param request
 	 * @return
 	 */

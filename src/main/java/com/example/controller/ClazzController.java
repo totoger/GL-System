@@ -32,6 +32,12 @@ public class ClazzController {
 	@Autowired
 	private ClazzService clazzService;
 
+	/**
+	 *班级列表
+	 * @param model
+	 * @return
+	 */
+
 	@RequestMapping(value="/list",method=RequestMethod.GET)
 	public ModelAndView list(ModelAndView model){
 		model.setViewName("clazz/clazz_list");
@@ -42,7 +48,7 @@ public class ClazzController {
 	}
 	
 	/**
-	 * ��ȡ�༶�б�
+	 * 获取班级列表
 	 * @param name
 	 * @param page
 	 * @return
@@ -68,7 +74,7 @@ public class ClazzController {
 	}
 	
 	/**
-	 * �༭�༶��Ϣ
+	 * 编辑班级
 	 * @param clazz
 	 * @return
 	 */
@@ -78,27 +84,27 @@ public class ClazzController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(StringUtils.isEmpty(clazz.getName())){
 			ret.put("type", "error");
-			ret.put("msg", "�༶���Ʋ���Ϊ�գ�");
+			ret.put("msg", "班级名不能为空！");
 			return ret;
 		}
 		if(clazz.getGradeId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "�����꼶����Ϊ�գ�");
+			ret.put("msg", "所属年级不能为空！");
 			return ret;
 		}
 		if(clazzService.edit(clazz) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "�༶�޸�ʧ�ܣ�");
+			ret.put("msg", "修改失败！");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "�༶�޸ĳɹ���");
+		ret.put("msg", "修改成功！");
 		return ret;
 	}
 	
 	
 	/**
-	 * ��Ӱ༶��Ϣ
+	 * 添加班级
 	 * @param clazz
 	 * @return
 	 */
@@ -108,26 +114,26 @@ public class ClazzController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(StringUtils.isEmpty(clazz.getName())){
 			ret.put("type", "error");
-			ret.put("msg", "�༶���Ʋ���Ϊ�գ�");
+			ret.put("msg", "班级名称不能为空！");
 			return ret;
 		}
 		if(clazz.getGradeId() == null){
 			ret.put("type", "error");
-			ret.put("msg", "��ѡ�������꼶��");
+			ret.put("msg", "请选择所属年级！");
 			return ret;
 		}
 		if(clazzService.add(clazz) <= 0){
 			ret.put("type", "error");
-			ret.put("msg", "�༶���ʧ�ܣ�");
+			ret.put("msg", "添加失败！");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "�༶��ӳɹ���");
+		ret.put("msg", "添加成功！");
 		return ret;
 	}
 	
 	/**
-	 * ɾ���༶��Ϣ
+	 * 删除班级
 	 * @param ids
 	 * @return
 	 */
@@ -139,23 +145,23 @@ public class ClazzController {
 		Map<String, String> ret = new HashMap<String, String>();
 		if(ids == null || ids.length == 0){
 			ret.put("type", "error");
-			ret.put("msg", "��ѡ��Ҫɾ�������ݣ�");
+			ret.put("msg", "选择要删除的的数据！");
 			return ret;
 		}
 		try {
 			if(clazzService.delete(StringUtil.joinString(Arrays.asList(ids), ",")) <= 0){
 				ret.put("type", "error");
-				ret.put("msg", "ɾ��ʧ�ܣ�");
+				ret.put("msg", "删除失败！");
 				return ret;
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			ret.put("type", "error");
-			ret.put("msg", "�ð༶�´���ѧ����Ϣ������嶯��");
+			ret.put("msg", "班级下存在学生信息，删除失败！");
 			return ret;
 		}
 		ret.put("type", "success");
-		ret.put("msg", "�༶ɾ���ɹ���");
+		ret.put("msg", "删除成功！");
 		return ret;
 	}
 	
