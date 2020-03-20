@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.totoger.glsystem.dao.TeacherMapper">
+  	<select id="findByUserName" parameterType="String" resultType="Teacher">
+  		select * from teacher where username = #{username}
+  	</select>
+  	<select id="findList" parameterType="Map" resultType="Teacher">
+  		select * from teacher where username like #{username} limit #{offset},#{pageSize}
+  	</select>
+  	<select id="getTotal" parameterType="Map" resultType="Integer">
+  		select count(id) from teacher where username like #{username}
+  	</select>
+  	<update id="add" parameterType="Teacher">
+  		insert into teacher(id,username,password,tname) values(null,#{username},#{password},#{tname})
+  	</update>
+  	<update id="edit" parameterType="Teacher">
+  		update teacher set username = #{username},password = #{password},tname = #{tname} where id = #{id}
+  	</update>
+  	<update id="delete" parameterType="String">
+  		delete from teacher where id in (${value})
+  	</update>
+</mapper>

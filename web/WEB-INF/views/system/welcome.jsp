@@ -8,19 +8,20 @@
 </head>
 <body>
 
-<div title="欢迎使用" style="padding:20px;overflow:hidden; color:red; " >
-	<p style="font-size: 25px; line-height: 30px; height: 30px;">欢迎使用学生信息管理系统</p>
-  	<p>开发人员：artisan</p>
-  	<p>开发周期：2018/11/18 --- 2018/11/25（共计7天）</p>
+<div title="欢迎使用" style="padding:20px;overflow:hidden; color:black; " >
+	<p style="font-size: 25px; line-height: 30px; height: 30px;">记录板</p>
+  	<p>5.18答辩 还不快搬</p>
+	<p>教师端还存bug</p>
+	<p>表单依旧有问题</p>
+	<p>邮箱功能要提上日程</p>
+
   	
   	<hr />
   	<h2>系统环境</h2>
   	<p>系统环境：Windows</p>
-	<p>开发工具：Eclipse</p>
-	<p>Java版本：JDK 1.7</p>
-	<p>服务器：tomcat 7.0</p>
+	<p>开发工具：IDEA</p>
+	<p>服务器：tomcat 8 可能会换成SB内置服务器</p>
 	<p>数据库：MySQL 5.7</p>
-	<p>系统采用技术： SSM框架+Jsp+EasyUI+jQuery+Ajax+面向接口编程</p>
 </div>
 </body>
 </html>

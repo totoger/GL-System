@@ -59,13 +59,13 @@
 		});
 	})
 </script> 
-<title>登录|学生信息管理系统</title>
-<meta name="keywords" content="学生信息管理系统">
+<title>登录|高校教师导学系统</title>
+<meta name="keywords" content="高校教师导学系统">
 </head>
 <body>
 
 <div class="header" style="padding: 0;">
-	<h2 style="color: white; width: 400px; height: 60px; line-height: 60px; margin: 0 0 0 30px; padding: 0;">学生信息管理系统</h2>
+	<h2 style="color: white; width: 400px; height: 60px; line-height: 60px; margin: 0 0 0 30px; padding: 0;">高校教师导学系统</h2>
 </div>
 <div class="loginWraper">
   <div id="loginform" class="loginBox">
@@ -92,11 +92,15 @@
       <div class="mt-20 skin-minimal" style="text-align: center;">
 		<div class="radio-box">
 			<input type="radio" id="radio-2" name="type" value="2" />
-			<label for="radio-1">学生</label>
+			<label for="radio-2">学生</label>
 		</div>
+        <div class="radio-box">
+            <input type="radio" id="radio-3" name="type" value="3" />
+            <label for="radio-3">教师</label>
+        </div>
 		<div class="radio-box">
 			<input type="radio" id="radio-1" checked name="type" value="1" />
-			<label for="radio-2">管理员</label>
+			<label for="radio-1">管理员</label>
 		</div>
 	</div>
       
@@ -108,7 +112,7 @@
     </form>
   </div>
 </div>
-<div class="footer">Copyright &nbsp; artisan @ 【猿来入此】 </div>
+<div class="footer">Copyright &nbsp; artisan @ totoger </div>
 
 
 </body>
