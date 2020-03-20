@@ -40,13 +40,13 @@
                     ]
                 },
                 {
-                    "menuid": "3", "icon": "", "menuname": "年级信息管理",
+                    "menuid": "3", "icon": "", "menuname": "测试模块1",
                     "menus": [
                         {"menuid": "31", "menuname": "年级列表", "icon": "icon-world", "url": "../grade/list"},
                     ]
                 },
                 {
-                    "menuid": "4", "icon": "", "menuname": "班级信息管理",
+                    "menuid": "4", "icon": "", "menuname": "测试模块2",
                     "menus": [
                         {"menuid": "41", "menuname": "班级列表", "icon": "icon-house", "url": "../clazz/list"},
                     ]

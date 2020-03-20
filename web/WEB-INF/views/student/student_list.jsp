@@ -122,7 +122,7 @@
 	    $("#addDialog").dialog({
 	    	title: "添加学生",
 	    	width: 450,
-	    	height: 650,
+	    	height: 600,
 	    	iconCls: "icon-add",
 	    	modal: true,
 	    	collapsible: false,
@@ -178,7 +178,7 @@
 	  	$("#editDialog").dialog({
 	  		title: "修改学生信息",
 	    	width: 450,
-	    	height: 650,
+	    	height: 600,
 	    	iconCls: "icon-edit",
 	    	modal: true,
 	    	collapsible: false,
